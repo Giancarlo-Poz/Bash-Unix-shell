@@ -1,0 +1,31 @@
+####################################
+########### BASH ALIASES ###########
+####################################
+# sourced in bashrc file
+
+alias peter='echo "ssh -Y giancarlo@130.194.160.24" && echo "" && ssh -Y giancarlo@130.194.160.24' # connect to Peter's computer
+alias tomas='echo "ssh -Y giancarlo@130.194.167.186" && echo "" && ssh -Y giancarlo@130.194.167.186' # connect to Tomas's computer
+alias marconi='echo "ssh gpozzo00@login.marconi.cineca.it" && echo "" && ssh gpozzo00@login.marconi.cineca.it'
+alias cineca='echo "ssh gpozzo00@login.marconi.cineca.it" && echo "" && ssh gpozzo00@login.marconi.cineca.it'
+alias stampa="system-config-printer" # See printers
+alias update='echo "" && echo "   cp ~/.bashrc ~/Dropbox/script/.bashrc && cp ~/.vimrc ~/Dropbox/script/.vimrc && cp ~/.imwheelrc ~/Dropbox/script/.imwheelrc && sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt purge dpkg --list | grep ^rc | cut -d   -f 3" && echo "" && cp ~/.bashrc ~/Dropbox/script/.bashrc && cp ~/.vimrc ~/Dropbox/script/.vimrc && cp ~/.imwheelrc ~/Dropbox/script/.imwheelrc && sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt purge `dpkg --list | grep "^rc" | cut -d " " -f 3`'
+#alias sc="sh ~/Dropbox/script/ReloadShortCut"
+alias installa="sudo apt update && sudo apt full-upgrade && sudo apt install -y"
+alias disinstalla="sudo apt purge --auto-remove"
+#alias v="vi"
+#alias vim="vi"
+alias open="xdg-open"
+alias findTool="apropos"
+alias xopen="xdg-open"
+alias beep='xterm -e sh -c '\''echo -e "\a"; echo "TASK FINISHED"; sleep 5'\'''
+alias alert='xterm -e sh -c '\''for i in $(seq 5); do echo -n "\a"; sleep .2; done; echo "TASK FINISHED"; sleep 600'\'''
+alias beep1="alert"
+#alias alert1='xterm -e sh -c '\''echo "10 minutes to shutdown\n \a"; sleep 1 ; echo " 5 minutes to shutdown\n \a"; sleep 1; echo " 3 minutes to shutdown\n \a"; sleep 1; echo " 2 minutes to shutdown\n \a"; sleep 1; echo " 1 minutes to shutdown\n\n \a"; sleep 1; echo "30 seconds to shutdown\n\n \a"; sleep 1; echo "     SHUTDOWN NOW"; source /home/unknow/Dropbox/script/shutdown ; sleep 600 '\'''
+alias cgrep='grep --color=always'
+alias g++='g++ -Wall -Weffc++ -Wextra -Wsign-conversion -pedantic-errors'
+alias meteo='curl http://wttr.in/melbourne'
+
+alias anacondaActivate=". ~/Dropbox/script/anaconda/anacondaActivate"
+alias anacondaDeactivate=". ~/Dropbox/script/anaconda/anacondaDeactivate"
+
+#alias texup="tlmgr --gui update --all"

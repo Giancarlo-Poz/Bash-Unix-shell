@@ -1,0 +1,110 @@
+####################################
+########## BASH FUNCTIONS ##########
+####################################
+# sourced in bashrc file
+
+# VERY STRANGE: IF m IS UPPERCASE I GOT ERROR WHEN i RUN  . .bashrc
+# use vim with on your computer with fils on Marconi
+vimSshmarconi() {
+	 vim scp://gpozzo00@login.marconi.cineca.it//"$1"
+}
+
+
+#cpFromPeter="scp -r giancarlo@130.194.160.24:"
+#                  "scp -r /home/unknow/Dropbox/Scan/SlaveScan2.wl giancarlo@130.194.160.24:/home/giancarlo/Scan
+
+# Function to copy from Peter's computer while logged on my computer
+cpFromPeter() {
+	scp -r giancarlo@130.194.160.24:"$1" "$2"
+}
+
+# Function to copy to Peter's computer while logged on my computer
+cpToPeter() {
+	scp -r "$1" giancarlo@130.194.160.24:"$2"
+}
+
+# Function to copy from Tomas's computer while logged on my computer
+cpFromTomas() {
+	scp -r giancarlo@130.194.167.186:"$1" "$2"
+}
+
+# Function to copy to Tomas's computer while logged on my computer
+cpToTomas() {
+	scp -r "$1" giancarlo@130.194.167.186:"$2"
+}
+
+# Function to copy from marconi while logged on my computer
+cpFromMarconi() {
+	scp -r gpozzo00@login.marconi.cineca.it:"$1" "$2"
+}
+
+# Function to copy to marconi while logged on my computer
+cpToMarconi() {
+	scp -r "$1" gpozzo00@login.marconi.cineca.it:"$2"
+}
+
+# Function to copy to the clipboard
+c() {
+	"$1" | tr -d '\n' | xclip -selection clipboard
+}
+# the alias to paste alias v="xclip -o -selection clipboard" is already used for vim
+
+# Function to open a file with the default application
+o() {
+	xdg-open "$1" &
+}
+
+# Handy Extract Program
+function extract()     
+{
+   if [ -f $1 ] ; then
+      case $1 in
+          *.tar.bz2)   tar xvjf $1     ;;
+          *.tar.gz)    tar xvzf $1     ;;
+          *.bz2)       bunzip2 $1      ;;
+          *.rar)       unrar x $1      ;;
+          *.gz)        gunzip $1       ;;
+          *.tar)       tar xvf $1      ;;
+          *.tbz2)      tar xvjf $1     ;;
+          *.tgz)       tar xvzf $1     ;;
+          *.zip)       unzip $1        ;;
+          *.Z)         uncompress $1   ;;
+          *.7z)        7z x $1         ;;
+          *)           echo "'$1' cannot be extracted via >extract<" ;;
+      esac
+   else
+       echo "'$1' is not a valid file!"
+   fi
+}
+
+# Find a file with a pattern in name:
+function f() { find . -type f -iname '*'"$*"'*' -ls ; }
+
+function cdls { cd "$1"; pwd; ls;}
+function cdll { cd "$1"; pwd; ll;}
+
+# From https://superuser.com/questions/611538/is-there-a-way-to-display-a-countdown-or-stopwatch-timer-in-a-terminal
+function countdown(){
+   date1=$((`date +%s` + $1)); 
+   while [ "$date1" -ge `date +%s` ]; do 
+     echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
+     sleep 0.1
+   done
+}
+function stopwatch(){
+  date1=`date +%s`; 
+   while true; do 
+    echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r"; 
+    sleep 0.1
+   done
+}
+
+function PdfGrepIm(){
+    str="$1";
+    echo "pdfgrep --files-with-matches \"$str\" **/*.pdf";
+    pdfgrep --files-with-matches $str **/*.pdf;
+    echo;
+    echo "pdfgrep -rni \"$str\""
+    pdfgrep -rni $str;
+}
+

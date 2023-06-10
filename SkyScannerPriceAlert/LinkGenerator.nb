@@ -1,0 +1,234 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9423,        226]
+NotebookOptionsPosition[      8096,        197]
+NotebookOutlinePosition[      8433,        212]
+CellTagsIndexPosition[      8390,        209]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"andata", "=", 
+   RowBox[{"Flatten", "@", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+      "\"\<https://www.skyscanner.com.au/transport/flights/mela/\>\"", "<>", 
+       "i", "<>", "\"\</1912\>\"", "<>", 
+       RowBox[{"ToString", "[", "j", "]"}], "<>", 
+       "\"\</?adultsv2=1&childrenv2=&cabinclass=economy&rtn=0&preferdirects=\
+false&outboundaltsenabled=false&inboundaltsenabled=false&qp_prevProvider=ins_\
+month&qp_prevCurrency=AUD#/\>\""}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<rome\>\"", ",", " ", "\"\<turi\>\"", ",", "\"\<veni\>\"", ",", 
+          "\"\<flor\>\"", ",", "\"\<pisa\>\"", ",", "\"\<vero\>\"", ",", 
+          "\"\<napl\>\"", ",", "\"\<bari\>\"", ",", "\"\<bolo\>\""}], "}"}]}],
+        "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "10", ",", "20"}], "}"}]}], "]"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.7816078717923717`*^9, 3.781607950365059*^9}, {
+  3.781608036255062*^9, 3.781608138966043*^9}, {3.781608400553116*^9, 
+  3.78160841665685*^9}, {3.781608654594366*^9, 3.781608657401424*^9}, {
+  3.7816088213318443`*^9, 3.781608838778921*^9}, {3.7817031215013027`*^9, 
+  3.781703130308466*^9}, {3.781704676569079*^9, 3.781704680029237*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"74501feb-d2ae-4c54-a719-ab9ec6de8b0f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"if", " ", "the", " ", "script", " ", 
+    RowBox[{"doesn", "'"}], "t", " ", "work", " ", "try", " ", "to", " ", 
+    "add", " ", "a", " ", "empty", " ", "line", " ", "at", " ", "the", " ", 
+    "end"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"AppendTo", "[", 
+    RowBox[{"andata", ",", "\"\< \>\""}], "]"}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.781703460357945*^9, 3.781703521253623*^9}, 
+   3.7817035781107817`*^9, 3.781703625031021*^9, {3.7817065989055643`*^9, 
+   3.7817066245503273`*^9}},ExpressionUUID->"3e72035d-3103-489e-aed8-\
+3d7469d9feda"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ritorno", "=", 
+   RowBox[{"Flatten", "@", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+      "\"\<https://www.skyscanner.com.au/transport/flights/\>\"", "<>", "i", 
+       "<>", "\"\</mela/2001\>\"", "<>", 
+       RowBox[{"ToString", "[", "j", "]"}], "<>", 
+       "\"\</?adultsv2=1&childrenv2=&cabinclass=economy&rtn=0&preferdirects=\
+false&outboundaltsenabled=false&inboundaltsenabled=false&qp_prevProvider=ins_\
+month&qp_prevCurrency=AUD#/\>\""}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<rome\>\"", ",", " ", "\"\<bari\>\"", ",", "\"\<brin\>\"", ",", 
+          "\"\<mila\>\"", ",", "\"\<napl\>\"", ",", "\"\<veni\>\""}], "}"}]}],
+        "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "10", ",", "20"}], "}"}]}], "]"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.781608422272418*^9, 3.781608447339932*^9}, {
+  3.781608510842483*^9, 3.7816085301320047`*^9}, {3.781608570192829*^9, 
+  3.7816086647864933`*^9}, {3.7816088297316227`*^9, 3.781608830882352*^9}, {
+  3.7817031946454268`*^9, 3.7817031975485992`*^9}, {3.781704688486519*^9, 
+  3.781704691517025*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"a5bd3e69-8bb3-482b-ad14-02c82b903db5"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"if", " ", "the", " ", "script", " ", 
+    RowBox[{"doesn", "'"}], "t", " ", "work", " ", "try", " ", "to", " ", 
+    "add", " ", "a", " ", "empty", " ", "line", " ", "at", " ", "the", " ", 
+    "end"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"AppendTo", "[", 
+    RowBox[{"ritorno", ",", "\"\< \>\""}], "]"}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.7817035054212103`*^9, 3.781703518082306*^9}, 
+   3.781703574093542*^9, 3.781703642255148*^9, {3.78170662749767*^9, 
+   3.781706629089884*^9}},ExpressionUUID->"f4c8560f-ab91-48ee-9db1-\
+e137db4e8bcc"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"andataRitorno", "=", 
+   RowBox[{"Flatten", "@", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+      "\"\<https://www.skyscanner.com.au/transport/flights/mela/\>\"", "<>", 
+       RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\</1912\>\"", "<>", 
+       RowBox[{"ToString", "[", "j", "]"}], "<>", "\"\</2001\>\"", "<>", 
+       RowBox[{"ToString", "[", "k", "]"}], "<>", 
+       "\"\</?adultsv2=1&childrenv2=&cabinclass=economy&rtn=1&preferdirects=\
+false&outboundaltsenabled=false&inboundaltsenabled=false&qp_prevProvider=ins_\
+month&qp_prevCurrency=AUD#/\>\""}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<napl\>\"", ",", "\"\<mila\>\"", ",", "\"\<rome\>\"", ",", " ", 
+          "\"\<bolo\>\"", ",", "\"\<veni\>\""}], "}"}]}], "}"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "10", ",", "20"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"k", ",", "10", ",", "20"}], "}"}]}], "]"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.781857052320231*^9, 3.781857053948394*^9}, 
+   3.781857105787693*^9, {3.7818571410407677`*^9, 3.781857184257742*^9}, {
+   3.781857225946528*^9, 3.781857242113118*^9}, {3.781857297650676*^9, 
+   3.781857305057537*^9}, {3.781857397115181*^9, 3.781857402970394*^9}, {
+   3.7818574369305267`*^9, 3.7818574371064863`*^9}, 3.781857975703363*^9, {
+   3.783247090159916*^9, 3.783247103350671*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"231a6090-83bc-41fd-9b72-bd1cf0850a4b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\</home/unknow/Dropbox/ongoing/italia/andataList.txt\>\"", ",", 
+   "andata"}], "]"}]], "Input",
+ CellChangeTimes->{{3.781703022403686*^9, 3.7817030231472797`*^9}, {
+  3.781703214136808*^9, 3.7817032301236677`*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"2f93460f-2ea0-4972-bfa9-630ec17b4a77"],
+
+Cell[BoxData["\<\"/home/unknow/Dropbox/ongoing/italia/andataList.txt\"\>"], \
+"Output",
+ CellChangeTimes->{
+  3.781703023785385*^9, 3.7817031371037407`*^9, 3.781703231118362*^9, 
+   3.781703542499962*^9, {3.7817035830368557`*^9, 3.7817036293720407`*^9}, 
+   3.781704701507759*^9, 3.781704884331246*^9, 3.7817065867285557`*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"51b25859-840c-44b1-8a94-9e7f891c19ee"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\</home/unknow/Dropbox/ongoing/italia/ritornoList.txt\>\"", ",", 
+   "ritorno"}], "]"}]], "Input",
+ CellChangeTimes->{{3.78170488977421*^9, 3.781704895831357*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"f09f5560-eada-4464-b86a-937b747d57df"],
+
+Cell[BoxData["\<\"/home/unknow/Dropbox/ongoing/italia/ritornoList.txt\"\>"], \
+"Output",
+ CellChangeTimes->{3.781704897554689*^9, 3.781706589368854*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"21145531-b1d9-470d-a2a6-20faa7fb50c7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\</home/unknow/Dropbox/ongoing/italia/andataRitornoList.txt\>\"", ",", 
+   "andataRitorno"}], "]"}]], "Input",
+ CellChangeTimes->{{3.781857757436061*^9, 3.781857767763987*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"27c6df10-c146-4ffb-8b6f-f87febadf88e"],
+
+Cell[BoxData["\<\"/home/unknow/Dropbox/ongoing/italia/andataRitornoList.txt\"\
+\>"], "Output",
+ CellChangeTimes->{3.78185798435282*^9, 3.783247144141879*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"7fb0ff2b-0395-4e7f-9379-1150cb1dfb51"]
+}, Open  ]]
+},
+WindowSize->{1920, 1047},
+WindowMargins->{{1920, Automatic}, {0, Automatic}},
+FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1428, 29, 218, "Input",ExpressionUUID->"74501feb-d2ae-4c54-a719-ab9ec6de8b0f"],
+Cell[1989, 51, 622, 13, 82, "Input",ExpressionUUID->"3e72035d-3103-489e-aed8-3d7469d9feda"],
+Cell[2614, 66, 1314, 28, 218, "Input",ExpressionUUID->"a5bd3e69-8bb3-482b-ad14-02c82b903db5"],
+Cell[3931, 96, 618, 13, 82, "Input",ExpressionUUID->"f4c8560f-ab91-48ee-9db1-e137db4e8bcc"],
+Cell[4552, 111, 1598, 32, 286, "Input",ExpressionUUID->"231a6090-83bc-41fd-9b72-bd1cf0850a4b"],
+Cell[CellGroupData[{
+Cell[6175, 147, 348, 7, 47, "Input",ExpressionUUID->"2f93460f-2ea0-4972-bfa9-630ec17b4a77"],
+Cell[6526, 156, 404, 6, 53, "Output",ExpressionUUID->"51b25859-840c-44b1-8a94-9e7f891c19ee"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6967, 167, 296, 6, 47, "Input",ExpressionUUID->"f09f5560-eada-4464-b86a-937b747d57df"],
+Cell[7266, 175, 230, 3, 53, "Output",ExpressionUUID->"21145531-b1d9-470d-a2a6-20faa7fb50c7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7533, 183, 309, 6, 47, "Input",ExpressionUUID->"27c6df10-c146-4ffb-8b6f-f87febadf88e"],
+Cell[7845, 191, 235, 3, 53, "Output",ExpressionUUID->"7fb0ff2b-0395-4e7f-9379-1150cb1dfb51"]
+}, Open  ]]
+}
+]
+*)
+
