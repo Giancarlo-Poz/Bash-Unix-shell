@@ -5,7 +5,7 @@
 
 printf "$(date '+%Y/%m/%d  %H:%M:%S  %Z(%:::z)') start shutdown scripts\n|" >> ~/scriptsLog.log
 
-. ~/Dropbox/script/shutdown_close_apps.sh
+. ~/MEGAsync/GiancarloDropbox/Dropbox/script/shutdown_close_apps.sh
 
 . ~/MEGAsync/GiancarloDropbox/Dropbox/script/shutdown_do.sh
 
