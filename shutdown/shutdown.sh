@@ -1,6 +1,6 @@
 #!/bin/bash
 
-(uxterm -e " echo '          START SHUTDOWN' ; sleep 2 ") &
+(uxterm -e " echo -e "\a" ; echo '          START SHUTDOWN' ; sleep 2 ") &
 
 
 printf "$(date '+%Y/%m/%d  %H:%M:%S  %Z(%:::z)') start shutdown scripts\n|" >> ~/scriptsLog.log

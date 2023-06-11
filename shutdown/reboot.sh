@@ -1,6 +1,6 @@
 #!/bin/bash
 
-(uxterm -e " echo '          START REBOOT' ; sleep 2 ") &
+(uxterm -e " echo -e "\a" ; echo '          START REBOOT' ; sleep 2 ") &
 
 . ~/Dropbox/script/shutdown_close_apps.sh
 
