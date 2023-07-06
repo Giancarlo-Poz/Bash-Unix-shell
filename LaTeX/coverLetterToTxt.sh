@@ -17,7 +17,6 @@ tr -s '\n' ' ' < coverLetter_GiancarloPozzo.txt > coverLetter_GiancarloPozzo1.tx
 mv coverLetter_GiancarloPozzo1.txt coverLetter_GiancarloPozzo.txt
 
 #insert new lines
-#sed -i '0,/Dear Hiring Team, /s//&\n\n/' coverLetter_GiancarloPozzo.txt
 new_line_at "Dear Hiring Team,"
 new_line_at "future plans."
 new_line_at "2021 International eAssessment Awards."
