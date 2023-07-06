@@ -31,5 +31,4 @@ sed -i "0,/Yours sincerely,/s//&\n/" coverLetter_GiancarloPozzo.txt
 # remove space at the beginning of lines
 sed -i 's/^[[:space:]]*//' coverLetter_GiancarloPozzo.txt
 
-
 cd "$pwd"
