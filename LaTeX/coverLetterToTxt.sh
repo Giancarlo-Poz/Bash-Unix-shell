@@ -1,5 +1,10 @@
 #!/bin/bash
 
+new_line_at() {
+  local input=$1
+  sed -i "0,/$input/s//&\n\n/" coverLetter_GiancarloPozzo.txt
+}
+
 currentDir=$(pwd)
 
 cd "/home/giancarlo/MEGAsync/GiancarloDropbox/Dropbox/ongoing/job/CoverLetter/coverLetterGeneral"
@@ -12,10 +17,19 @@ tr -s '\n' ' ' < coverLetter_GiancarloPozzo.txt > coverLetter_GiancarloPozzo1.tx
 mv coverLetter_GiancarloPozzo1.txt coverLetter_GiancarloPozzo.txt
 
 #insert new lines
-#sed -i 's/Dear Hiring Team,/&\n\n/g' coverLetter_GiancarloPozzo.txt
 #sed -i '0,/Dear Hiring Team, /s//&\n\n/' coverLetter_GiancarloPozzo.txt
-#sed -i 's/substring/&\n\n/g' file.txt
+new_line_at "Dear Hiring Team,"
+new_line_at "future plans."
+new_line_at "2021 International eAssessment Awards."
+new_line_at "MedTech Actuator’s competition."
+new_line_at "international conferences."
+new_line_at "perfect candidate for the role."
+new_line_at "capability and productivity."
+new_line_at "discuss the position."
+new_line_at "Yours sincerely,"
 
-#future plans.
+# remove space before at the beginning of a line
+
+
 
 cd "$pwd"
