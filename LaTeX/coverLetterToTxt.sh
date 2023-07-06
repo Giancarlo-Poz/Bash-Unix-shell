@@ -26,10 +26,10 @@ new_line_at "international conferences."
 new_line_at "perfect candidate for the role."
 new_line_at "capability and productivity."
 new_line_at "discuss the position."
-new_line_at "Yours sincerely,"
+sed -i "0,/Yours sincerely,/s//&\n/" coverLetter_GiancarloPozzo.txt
 
-# remove space before at the beginning of a line
-
+# remove space at the beginning of lines
+sed -i 's/^[[:space:]]*//' coverLetter_GiancarloPozzo.txt
 
 
 cd "$pwd"
