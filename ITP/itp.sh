@@ -34,3 +34,12 @@ abs() {
 ceil() {
     awk -v num="$1" 'BEGIN { ceiling = int(num + (num > int(num))); print ceiling }'
 }
+
+
+x_min=$1
+x_max=$2
+y=$3
+ITP(){
+...
+echo x_best
+}
