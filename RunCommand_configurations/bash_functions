@@ -108,3 +108,44 @@ function PdfGrepIm(){
     pdfgrep -rni $str;
 }
 
+
+function time_pin() {
+    if [[ -z $start_time_from_time_pin ]]; then
+        declare -g -r start_time_from_time_pin=$(date +%s) #
+        echo "00:00:00"
+    else
+        local current_time=$(date +%s)
+        local elapsed_seconds=$((current_time - start_time_from_time_pin))
+        local elapsed_minutes=$(((elapsed_seconds / 60) % 60))
+        local elapsed_hours=$(((elapsed_seconds / 3600) % 60))
+
+        local elapsed_seconds=$((elapsed_seconds % 60))
+
+        printf "%02d:%02d:%02d\n" "$elapsed_hours" "$elapsed_minutes" "$elapsed_seconds"
+    fi
+}
+# to check if time_pin was already used
+#if [[ -n $start_time_from_time_pin ]]; then
+#  echo "variable start_time_from_time_pin not empty"
+#else
+#  echo "ok"
+#fi
+
+function time_pin1_start() {
+    declare -g start_time_from_time_pin1_start=$(date +%s)
+}
+
+function time_pin1_end() {
+    if [[ -z $start_time_from_time_pin1_start ]]; then
+        echo "First use the time_pin1_start, then time_pin1_end print the time from time_pin1_start to time_pin1_end"
+    else
+        local current_time=$(date +%s)
+        local elapsed_seconds=$((current_time - start_time_from_time_pin1_start))
+        local elapsed_minutes=$(((elapsed_seconds / 60) % 60))
+        local elapsed_hours=$(((elapsed_seconds / 3600) % 60))
+
+        local elapsed_seconds=$((elapsed_seconds % 60))
+
+        printf "%02d:%02d:%02d\n" "$elapsed_hours" "$elapsed_minutes" "$elapsed_seconds"
+    fi
+}
