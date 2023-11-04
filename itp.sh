@@ -34,5 +34,3 @@ abs() {
 ceil() {
     awk -v num="$1" 'BEGIN { ceiling = int(num + (num > int(num))); print ceiling }'
 }
-
-echo $(abs "83.21")
