@@ -15,8 +15,8 @@ mkdir -p "$output_directory"
 split_text() {
   local input="$1"
   local output_dir="$2"
-  local max_words=1300
-  local max_chars=4000
+        max_words=1300
+        max_chars=4000
   local chunk_number=1
   local current_chunk_words=0
   local current_chunk_chars=0
@@ -49,11 +49,6 @@ else
   estimated_completion_time=0
 fi
 
-if ((line_number % 100 == 0)); then
-    # Reset every 100 lines avoiding too low values of estimated_completion_time
-    new_estimated_completion_time=0
-fi
-    
 # Reset new_estimated_completion_time every 3 sec avoiding too low values of estimated_completion_time
     now_time=$(date +%s)
     
