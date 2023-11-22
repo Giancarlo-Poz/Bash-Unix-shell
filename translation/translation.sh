@@ -156,7 +156,27 @@ for ((i=1; i<=346; i++)); do
     head -n -1 $output_directory/chunk_$i.txt >> $output_directory/combined_file.txt
 done
 
+echo ""
+echo "Checking for differencies"
+
 diff $output_directory/combined_file.txt $input_file
 
-echo "   All done"
+echo "Checking for file outside limits..."
+
+for file in $output_directory/*.txt; do   
+    
+    word_count=$(wc -w < "$file")
+    if ((word_count > max_words)); then
+        echo "$file has $word_count words (> $max_words words)"
+    fi
+
+    char_count=$(wc -m < "$file")
+    if ((char_count > max_chars)); then
+        echo "$file has $char_count characters (> $max_chars characters)"
+    fi 
+
+done
+
+
+echo "    All done"
 
